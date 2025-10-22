@@ -10,8 +10,9 @@ public static void main(String[]args){
 
     }
     for(int i=0;i<a;i++){
-        System.out.println(arr[1]);
+        System.out.println(arr[i]+" ");
     }
+ 
 
 }
 }

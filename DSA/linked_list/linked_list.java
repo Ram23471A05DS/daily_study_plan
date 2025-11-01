@@ -1,46 +1,42 @@
 class node{
     int data;
-    node next=null;
+    node address;
     node(int data){
         this.data=data;
-        this.next=null;
-    } 
-    
+        this.address=null;
+
+    }
 }
-
 class linked_list{
-
     node head;
     void insert(int val){
         node newnode=new node(val);
-        if(head ==null){
+        if(head==null){
             head=newnode;
             return;
         }
         node temp=head;
-        while(temp.next!=null){
-            temp=temp.next;
+        while(temp.address!=null){
+            temp=temp.address;
         }
-        temp.next=newnode;
+        temp.address=newnode;
+        
 
     }
-    void display(){
+    void print(){
         node temp=head;
-        while(temp.next!=null){
-            System.out.print(temp.data+"->");
-            temp=temp.next;
+        while(temp.address!=null){
+            System.out.println(temp.data);
+            temp=temp.address;
         }
         System.out.println(temp.data);
+        
     }
     public static void main(String[] args) {
-       linked_list list=new linked_list();
-       list.insert(10);
-       list.insert(11);
-       list.insert(55);
-       list.display();
-
+        
+        linked_list list=new linked_list();
+        list.insert(7);
+        list.print();
 
     }
-    
 }
-
